@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    --Orange: hsl(25, 97%, 53%);
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    background-color: #141519;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container.active{
+    display: block;
+}
+.container {
+    display: none;
+    max-width: 430px;
+    background-color: #1F2630;
+    padding: 30px;
+    height: fit-content;
+    border-radius: 30px;
+}
+
+@media(max-width:767px){
+    body {
+        display: block;
+        padding: 40px;
+        height: 100%;
+    }
+    .container {
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+.container .star {
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #262F34;
+    color: var(--Orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    color: hsl(0, 0%, 100%);
+    margin: 40px 0 20px;
+    font-weight: 700;
+}
+
+.container p {
+    line-height: 1.6;
+    color: hsl(217, 12%, 63%);
+}
+
+.container .rates{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 30px;
+}
+.container .rates span {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #262F34;
+    color: hsl(216, 12%, 54%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.container .rates span:hover,.container .rates span.active:hover{
+    background-color: var(--Orange);
+    color: hsl(0, 0%, 100%);
+}
+.container .rates span.active{
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+
+
+.container button {
+    width:100%;
+    background-color: var(--Orange);
+    color: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+}
+.container button:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: var(--Orange);
+}
+
+.container>img {
+    display: block;
+    margin: 20px auto;
+}
+
+.container .results {
+    display: block;
+    padding: 10px;
+    width:60%;
+    height: 40px;
+    background-color: #262F38;
+    border-radius: 20px;
+    margin:20px auto;
+    color: var(--Orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.container .thank-message {
+    text-align: center;
+    font-size: 17px;
+}
+
+@media(max-width:767px){
+    .container .results {
+        width:100%;
+    }
+}
